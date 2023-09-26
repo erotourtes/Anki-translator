@@ -1,4 +1,8 @@
-API_URL=f"https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=uk&dt=t&q="
+FROM_LANGUAGE = "en"
+TO_LANGUAGE = "uk"
+
+API_URL=f"https://translate.googleapis.com/translate_a/single?client=gtx&sl={FROM_LANGUAGE}&tl={TO_LANGUAGE}&dt=t&q="
+
 ANKI_JSON_PATH = "./anki cards/1000_Basic_English_Words/deck.json"
 
 WORD = 1
