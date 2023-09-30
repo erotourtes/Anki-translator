@@ -11,7 +11,8 @@ def main():
       translate_deck(deck)
 
 def translate_deck(deck_path):
-    anki_json = json.load(open(deck_path))
+    with open(deck_path) as file:
+        anki_json = json.load(file)
     list_of_notes : List[Dict[str, Any]] = anki_json["notes"]
     translate_notes(list_of_notes)
     save_json(anki_json, deck_path)
